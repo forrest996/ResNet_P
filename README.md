@@ -15,7 +15,7 @@ conda activate ResNet_P
 ```
 Clone this repo and install required packages:
 ```
-git clone https://github.c
+git clone https://github.com/forrest996/ResNet_P.git
 pip install -r requirements.txt
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
