@@ -22,7 +22,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 ### 2. Dataset prepare
 CIFER:
 ```
-https://www.cs.toronto.edu/~kriz/cifar.html
+URL: https://www.cs.toronto.edu/~kriz/cifar.html
 
 Download the file and extract it to:
 --data
