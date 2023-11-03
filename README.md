@@ -1,6 +1,6 @@
 # A stage-level network parallelization method based on depth decomposition. [None]
 
-This is the official Pytorch/PytorchLightning implementation of the paper: <br/>
+This is the official Pytorch implementation of the paper: <br/>
 > [**A stage-level network parallelization method based on depth decomposition.**](https:)      
 > Zuming Wu,Yunwei Zhang, 
 > *None*
