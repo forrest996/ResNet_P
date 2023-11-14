@@ -2,7 +2,7 @@
 
 This is the official Pytorch implementation of the paper: <br/>
 > [**A stage-level network parallelization method based on depth decomposition.**](https:)      
-> Zuming Wu,Yunwei Zhang, 
+> Zuming Wu, Yunwei Zhang, Bin Li, Chengjin Tao
 > *None*
 > 
 
