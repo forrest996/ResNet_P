@@ -23,7 +23,7 @@ import argparse
 import yaml
 from argparse import Namespace
 
-from tools.train_loader import CIFER_100
+from tools.train_loader import CIFER_100, CIFER_10
 from tools import utils
 from models.WideResNet_P2_tiny import wideresnet58_p2_4_tiny
 
@@ -146,9 +146,13 @@ class SequentialDistributedSampler(torch.utils.data.sampler.Sampler):
 
 # get dataloader
 def getloader(rank, world_size, args, pin_memory=True, num_workers=0):
-    train_data = CIFER_100(data_path=args.data_file, resize=None, model_selection='train',
+    if 'CIFER-100' in args.data_file:
+        loader_data = CIFER_100
+    elif 'CIFER-10' in args.data_file:
+        loader_data = CIFER_10
+    train_data = loader_data(data_path=args.data_file, resize=None, model_selection='train',
                            use_pretreatment=True, valid_size=0)
-    test_data = CIFER_100(data_path=args.data_file, resize=None, model_selection='test', use_pretreatment=True,
+    test_data = loader_data(data_path=args.data_file, resize=None, model_selection='test', use_pretreatment=True,
                           valid_size=0)
 
     train_sampler = DistributedSampler(train_data, num_replicas=world_size, rank=rank, shuffle=True, drop_last=True)
