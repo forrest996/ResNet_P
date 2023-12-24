@@ -7,7 +7,7 @@ import torch
 from torch.utils.data import DataLoader
 import time
 from argparse import ArgumentParser
-from train_loader import CIFER_100
+from train_loader import CIFAR_100
 
 
 from models.WideResNet_P2_tiny import wideresnet58_p2_4_tiny
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parse.add_argument('-s', '--size', type=int, default='32', help='the size of image')
     args = parse.parse_args()
 
-    test_data = CIFER_100(data_path=config['data_file'], resize=args.size, model_selection='test',
+    test_data = CIFAR_100(data_path=config['data_file'], resize=args.size, model_selection='test',
                           use_pretreatment=True,
                           valid_size=0)
     test_loader = DataLoader(test_data, batch_size=32, shuffle=False, drop_last=True, num_workers=4, pin_memory=False)
