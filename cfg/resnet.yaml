@@ -1,19 +1,18 @@
 
-
-data_file: './data/CIFER-100/'
+data_file: './data/CIFAR-100/'
 
 # --------------------------------------
 # The file naming is solely for storage.
 # Please adjust the model loading in the 'DDP_train.py'.
 # --------------------------------------
-model_save_name: 'resnet32'
+model_save_name: 'resnet'
 
 world_size: 4 # 4 GPUs
 
 # --------------------------------------
 # The default hyperparameter settings used for training on the CIFAR-100 dataset.
 # --------------------------------------
-seed: 1 # init seed
+seed: 0 # init seed
 train_batch_size: 64
 test_batch_size: 200
 lr_start: 0.69
