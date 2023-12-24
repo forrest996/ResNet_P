@@ -1,9 +1,9 @@
 # A stage-level network parallelization method based on depth decomposition. [None]
 
-This is the official Pytorch implementation of the paper: <br/>
+This is the official Pytorch/PytorchLightning implementation of the paper: <br/>
 > [**A stage-level network parallelization method based on depth decomposition.**](https:)      
-> Zuming Wu, Yunwei Zhang, Bin Li, Chengjin Tao
-> *None*
+> Zuming Wua,Yunwei Zhanga, 
+> *Advanced Theory and Simulations*
 > 
 
 ---
@@ -15,25 +15,25 @@ conda activate ResNet_P
 ```
 Clone this repo and install required packages:
 ```
-git clone https://github.com/forrest996/ResNet_P.git
+git clone https://github.c
 pip install -r requirements.txt
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 ### 2. Dataset prepare
-CIFER:
+CIFAR:
 ```
-URL: https://www.cs.toronto.edu/~kriz/cifar.html
+https://www.cs.toronto.edu/~kriz/cifar.html
 
 Download the file and extract it to:
 --data
-    ---CIFER-10
+    ---CIFAR-10
         ----data_batch_1
         ----data_batch_2
         ----data_batch_3
         ----data_batch_4
         ----data_batch_5
         ----test_batch
-    ---CIFER-100
+    ---CIFAR-100
         ----meta
         ----test
         ----train
@@ -41,7 +41,7 @@ Download the file and extract it to:
 
 
 ### 3. Training
-Training on CIFER:
+Training on CIFAR:
 ```
 python DDP_train.py -c './cfg/wideresnet.yaml'
 ```
