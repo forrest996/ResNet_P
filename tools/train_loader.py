@@ -7,7 +7,7 @@ import os
 import numpy as np
 import random
 
-# CIFER-10
+# CIFAR-10
 '''
         {b'batch_label': b'training batch 1 of 5', 
          b'labels': [6, 9 ... 1, 5], 
@@ -58,9 +58,9 @@ def get_image_transform(resize):
         ])
         return transform_train, transform_test
 
-class CIFER_10(Dataset):
+class CIFAR_10(Dataset):
     def __init__(self, data_path, resize=None, model_selection='train', use_pretreatment=True, valid_size=5000):
-        super(CIFER_10, self).__init__()
+        super(CIFAR_10, self).__init__()
         self.data_path = data_path
         self.resize = resize
         self.model_selection = model_selection
@@ -111,9 +111,9 @@ class CIFER_10(Dataset):
                 return torch.tensor(self.data_buffer[idx]['img']), torch.tensor(self.data_buffer[idx]['label'])
 
 
-class CIFER_100(Dataset):
+class CIFAR_100(Dataset):
     def __init__(self, data_path, resize=None, model_selection='train', use_pretreatment=True, valid_size=5000):
-        super(CIFER_100, self).__init__()
+        super(CIFAR_100, self).__init__()
         self.resize = resize
         self.model_selection = model_selection
         self.use_pretreatment = use_pretreatment
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     '''
     test
     '''
-    file = '../data/CIFER-100/'
+    file = '../data/CIFAR-100/'
     def set_seed(seed=None):
         random.seed(seed)
         os.environ["PYTHONHASHSEED"] = str(seed)
@@ -178,7 +178,7 @@ if __name__ == '__main__':
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
     set_seed(1)
-    data = CIFER_100(data_path=file, resize=None, model_selection='train', use_pretreatment=True, valid_size=0)
+    data = CIFAR_100(data_path=file, resize=None, model_selection='train', use_pretreatment=True, valid_size=0)
     print(data.__len__())
     classes = {19: '11-large_omnivores_and_herbivores', 29: '15-reptiles', 0: '4-fruit_and_vegetables', 11: '14-people',
      1: '1-fish', 86: '5-household_electrical_devices', 90: '18-vehicles_1', 28: '3-food_containers',
