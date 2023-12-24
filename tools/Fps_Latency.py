@@ -15,7 +15,7 @@ model = wideresnet58_p2_4_tiny()
 
 
 config = {
-    'data_file': './data/CIFER-100/',
+    'data_file': './data/CIFAR-100/',
 }
 
 
