@@ -49,7 +49,7 @@ python DDP_train.py -c './cfg/wideresnet.yaml'
 ### 4. Measure the latency
 To measure the latency on CPU/ARM and throughput on GPU, run
 ```
-python ./tools/Fps_Latency.py 
+python ./Fps_Latency.py 
 ```
 
 ## Citation
