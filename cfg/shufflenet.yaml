@@ -1,0 +1,26 @@
+
+data_file: './data/CIFAR-100/'
+
+# --------------------------------------
+# The file naming is solely for storage.
+# Please adjust the model loading in the 'DDP_train.py'.
+# --------------------------------------
+model_save_name: 'shufflenet'
+
+world_size: 4 # 4 GPUs
+
+# --------------------------------------
+# The default hyperparameter settings used for training on the CIFAR-100 dataset.
+# --------------------------------------
+seed: 0 # init seed
+train_batch_size: 32
+test_batch_size: 200
+lr_start: 0.1
+lr_strategy: 1  # num 1 for wideresnet
+momentum: 0.9
+weight_decay: 0.0005
+
+epochs: 200
+warmup_epochs: 10
+start_epoch: 0
+renew_gradient_step: 1
