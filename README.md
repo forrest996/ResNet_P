@@ -2,7 +2,7 @@
 
 This is the official Pytorch/PytorchLightning implementation of the paper: <br/>
 > [**A stage-level network parallelization method based on depth decomposition.**](https:)      
-> Zuming Wua,Yunwei Zhanga, 
+> Zuming Wu,Yunwei Zhang, Bin Li, Chengjin Tao
 > *IEEE Access*
 > 
 
