@@ -1,4 +1,4 @@
-# A stage-level network parallelization method based on depth decomposition. [None]
+# A stage-level network parallelization method based on depth decomposition.
 
 This is the official Pytorch/PytorchLightning implementation of the paper: <br/>
 > [**A stage-level network parallelization method based on depth decomposition.**](https:)      
@@ -50,15 +50,4 @@ python DDP_train.py -c './cfg/wideresnet.yaml'
 To measure the latency on CPU/ARM and throughput on GPU, run
 ```
 python ./Fps_Latency.py 
-```
-
-## Citation
-If you find this repository helpful, please consider citing:
-```
-@article{,
-  title={},
-  author={},
-  journal={},
-  year={}
-}
 ```
